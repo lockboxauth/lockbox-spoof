@@ -1,0 +1,6 @@
+github.com/dgrijalva/jwt-go v3.2.0+incompatible h1:7qlOGliEKZXTDg6OTjfoBKDXWrumCAMpl/TFQ4/5kLM=
+github.com/dgrijalva/jwt-go v3.2.0+incompatible/go.mod h1:E3ru+11k8xSBh+hMPgOLZmtrrCbhqsmaPHjLKYnJCaQ=
+impractical.co/auth/sessions v0.0.0-20180908101947-9cd90b17e6bd h1:/vdAUpAAgPltCNkCDzS5AI5/yyuON/AwyRS9+ZvrtC0=
+impractical.co/auth/sessions v0.0.0-20180908101947-9cd90b17e6bd/go.mod h1:2o69jlS21uvOk4tIncTZGq1ogGq1n1Hr6nNtP1ekc/g=
+yall.in v0.0.1 h1:oQkgnFIY1GmRmWLXjat+Lt8KE/yD3PbEYP7lt71utpo=
+yall.in v0.0.1/go.mod h1:sihZtLjLdINMcMiqCZ6juYVK9XuWt1RaMwGnwGlK1ag=

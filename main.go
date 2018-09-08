@@ -21,8 +21,7 @@ func main() {
 	}
 	profile := os.Args[1]
 	deps := sessions.Dependencies{
-		JWTPrivateKey: key,
-		JWTPublicKey:  key,
+		JWTSecret: key,
 	}
 	token := sessions.AccessToken{
 		ID:          "spoof",
