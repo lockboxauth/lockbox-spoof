@@ -2,17 +2,46 @@ package main
 
 import (
 	"context"
+	"crypto/rsa"
 	"fmt"
+	"io/ioutil"
 	"os"
 	"time"
 
+	jwt "github.com/dgrijalva/jwt-go"
 	"impractical.co/auth/sessions"
 )
+
+func pathOrContents(in string) (string, error) {
+	if _, err := os.Stat(in); err == nil {
+		contents, err := ioutil.ReadFile(in)
+		if err != nil {
+			return string(contents), err
+		}
+		return string(contents), nil
+	}
+	return in, nil
+}
 
 func main() {
 	key := os.Getenv("JWT_KEY")
 	if key == "" {
 		fmt.Println("JWT_KEY must be specified")
+		os.Exit(1)
+	}
+	privateKeyStr, err := pathOrContents(key)
+	if err != nil {
+		fmt.Println("Error getting JWT_KEY contents:", err)
+		os.Exit(1)
+	}
+	privateKey, err := jwt.ParseRSAPrivateKeyFromPEM([]byte(privateKeyStr))
+	if err != nil {
+		fmt.Println("Error parsing JWT_KEY contents:", err)
+		os.Exit(1)
+	}
+	serviceID := os.Getenv("SERVICE")
+	if serviceID == "" {
+		fmt.Println("SERVICE must be specified")
 		os.Exit(1)
 	}
 	if len(os.Args) < 2 {
@@ -21,7 +50,9 @@ func main() {
 	}
 	profile := os.Args[1]
 	deps := sessions.Dependencies{
-		JWTSecret: key,
+		JWTPrivateKey: privateKey,
+		JWTPublicKey:  privateKey.Public().(*rsa.PublicKey),
+		ServiceID:     serviceID,
 	}
 	token := sessions.AccessToken{
 		ID:          "spoof",
