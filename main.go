@@ -9,7 +9,8 @@ import (
 	"time"
 
 	jwt "github.com/dgrijalva/jwt-go"
-	"impractical.co/auth/sessions"
+
+	"lockbox.dev/sessions"
 )
 
 func pathOrContents(in string) (string, error) {
