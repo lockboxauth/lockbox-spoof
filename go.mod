@@ -2,5 +2,7 @@ module lockbox.dev/cmd/spoof
 
 require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
-	lockbox.dev/sessions v0.1.0
+	lockbox.dev/sessions v0.2.0
 )
+
+go 1.13

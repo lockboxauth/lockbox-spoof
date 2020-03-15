@@ -10,7 +10,7 @@ golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod h1:STP8DvDyc/dI5b8T5h
 golang.org/x/sys v0.0.0-20190412213103-97732733099d h1:+R4KGOnez64A81RvjARKc4UT5/tI9ujCIVX+P5KiHuI=
 golang.org/x/sys v0.0.0-20190412213103-97732733099d/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
-lockbox.dev/sessions v0.1.0 h1:GxW8YzSbz7qxjUUkmahDQ8WqcytvJ473jjelzUnxgz4=
-lockbox.dev/sessions v0.1.0/go.mod h1:miBCKmnPiFY7VVcFvlFYwDOuL8rwHHsh61KFhhi6B44=
+lockbox.dev/sessions v0.2.0 h1:gpvqDm7+QRUXf5FCOsP0VhFeZiif9ZbgzuwTP007MnQ=
+lockbox.dev/sessions v0.2.0/go.mod h1:oUEG4VwfIXnoUlcPPkqvo3GKltT6LRQ3fNl5D5qyb5Y=
 yall.in v0.0.1 h1:oQkgnFIY1GmRmWLXjat+Lt8KE/yD3PbEYP7lt71utpo=
 yall.in v0.0.1/go.mod h1:sihZtLjLdINMcMiqCZ6juYVK9XuWt1RaMwGnwGlK1ag=
