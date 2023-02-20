@@ -1,7 +1,7 @@
 module lockbox.dev/cmd/lockbox-spoof
 
 require (
-	github.com/golang-jwt/jwt/v4 v4.4.3
+	github.com/golang-jwt/jwt/v4 v4.5.0
 	lockbox.dev/sessions v0.3.0
 )
 
